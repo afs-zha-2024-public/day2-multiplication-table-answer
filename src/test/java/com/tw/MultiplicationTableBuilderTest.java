@@ -44,4 +44,18 @@ class MultiplicationTableBuilderTest {
         // Then
         assertFalse(isInRange);
     }
+
+    @Test
+    void should_return_true_when_isStarterSmallerThanEnder_given_a_start_2_and_end_3() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 3;
+
+        // When
+        boolean isStarterSmallerThanEnder = multiplicationTableBuilder.isStarterSmallerThanEnder(start, end);
+
+        // Then
+        assertTrue(isStarterSmallerThanEnder);
+    }
 }
