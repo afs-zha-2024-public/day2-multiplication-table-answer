@@ -25,6 +25,13 @@ public class MultiplicationTableBuilder {
     }
 
     public String generateTable(int start, int end) {
-        return "";
+        StringBuilder table = new StringBuilder();
+        for (int i = start; i <= end; i++) {
+            table.append(generateLine(start, i));
+            if (i != end) {
+                table.append("\n");
+            }
+        }
+        return table.toString();
     }
 }
