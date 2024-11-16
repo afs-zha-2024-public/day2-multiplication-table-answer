@@ -23,4 +23,8 @@ public class MultiplicationTableBuilder {
         }
         return line.toString();
     }
+
+    public String generateTable(int start, int end) {
+        return "";
+    }
 }

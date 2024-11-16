@@ -101,7 +101,7 @@ class MultiplicationTableBuilderTest {
     }
 
     @Test
-    void should_generate_lin_when_generateLine_given_a_start_2_and_end_4() {
+    void should_generate_line_when_generateLine_given_a_start_2_and_end_4() {
         // Given
         MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
         int start = 2;
@@ -112,5 +112,19 @@ class MultiplicationTableBuilderTest {
 
         // Then
         assertEquals("2*4=8 3*4=12 4*4=16", line);
+    }
+
+    @Test
+    void should_generate_multiplication_table_when_generateLine_given_a_start_2_and_end_4() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 4;
+
+        // When
+        String table = multiplicationTableBuilder.generateTable(start, end);
+
+        // Then
+        assertEquals("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16\n", table);
     }
 }
