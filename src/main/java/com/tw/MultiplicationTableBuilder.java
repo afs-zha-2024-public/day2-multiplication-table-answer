@@ -34,4 +34,8 @@ public class MultiplicationTableBuilder {
         }
         return table.toString();
     }
+
+    public boolean isValid(int start, int end) {
+        return isStarterSmallerThanEnder(start, end);
+    }
 }

@@ -127,4 +127,18 @@ class MultiplicationTableBuilderTest {
         // Then
         assertEquals("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16", table);
     }
+
+    @Test
+    void should_return_true_when_isValid_given_a_start_2_and_end_3() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 3;
+
+        // When
+        boolean isValid = multiplicationTableBuilder.isValid(start, end);
+
+        // Then
+        assertTrue(isValid);
+    }
 }
