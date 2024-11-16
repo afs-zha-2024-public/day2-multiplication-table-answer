@@ -99,4 +99,18 @@ class MultiplicationTableBuilderTest {
         // Then
         assertEquals("2*4=8", expression);
     }
+
+    @Test
+    void should_generate_lin_when_generateLine_given_a_start_2_and_end_4() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 4;
+
+        // When
+        String line = multiplicationTableBuilder.generateLine(start, end);
+
+        // Then
+        assertEquals("2*4=8 3*4=12 4*4=16", line);
+    }
 }
