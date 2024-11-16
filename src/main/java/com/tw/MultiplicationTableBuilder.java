@@ -36,6 +36,6 @@ public class MultiplicationTableBuilder {
     }
 
     public boolean isValid(int start, int end) {
-        return isStarterSmallerThanEnder(start, end);
+        return isInRange(start) && isStarterSmallerThanEnder(start, end);
     }
 }
