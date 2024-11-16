@@ -155,4 +155,18 @@ class MultiplicationTableBuilderTest {
         // Then
         assertFalse(isValid);
     }
+
+    @Test
+    void should_return_false_when_isValid_given_a_start_number_not_in_range() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 0;
+        int end = 2;
+
+        // When
+        boolean isValid = multiplicationTableBuilder.isValid(start, end);
+
+        // Then
+        assertFalse(isValid);
+    }
 }
