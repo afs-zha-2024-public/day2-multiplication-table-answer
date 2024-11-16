@@ -8,4 +8,8 @@ public class MultiplicationTableBuilder {
     public boolean isStarterSmallerThanEnder(int start, int end) {
         return start <= end;
     }
+
+    public String generateExpression(int start, int end) {
+        return "";
+    }
 }
