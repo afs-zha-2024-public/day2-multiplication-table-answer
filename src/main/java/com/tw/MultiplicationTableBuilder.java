@@ -10,6 +10,6 @@ public class MultiplicationTableBuilder {
     }
 
     public String generateExpression(int start, int end) {
-        return "";
+        return start + "*" + end + "=" + start * end;
     }
 }
